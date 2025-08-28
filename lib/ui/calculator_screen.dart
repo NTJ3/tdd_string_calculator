@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+
 import '../string_calculator.dart';
 
 class CalculatorScreen extends StatefulWidget {
   const CalculatorScreen({super.key, required this.calculator});
-  final Calculator calculator;
+  final StringCalculator calculator;
 
   @override
   State<CalculatorScreen> createState() => _CalculatorScreenState();
