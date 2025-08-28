@@ -9,6 +9,12 @@ A tiny project to **practice Test-Driven Development** in Flutter/Dart:
 
 ---
 
+## GitHub Actions
+
+[![CI Status](https://github.com/NTJ3/tdd_string_calculator/actions/workflows/flutter.yml/badge.svg)](https://github.com/NTJ3/tdd_string_calculator/actions/workflows/flutter.yml)
+
+---
+
 ## Requirements
 
 - Flutter 3.32.5 (stable channel)
@@ -83,15 +89,16 @@ All pushes and PRs trigger the pipeline.
 
 ---
 
-## License
-
-MIT (or your preferred license)
-
----
-
 ### Attachments
 
 | Name             | Image                                                                |
 | ----------------- | ------------------------------------------------------------------ |
 | App Images | ![AppTestCase](./screenshots/string_calculator_app.png) |
 | Test Cases | ![TestCase](./screenshots/test_cases.png) |
+
+
+---
+
+## License
+
+MIT (or your preferred license)
