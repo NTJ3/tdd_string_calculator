@@ -8,17 +8,23 @@ class NegativeNumbersException implements Exception {
 class StringCalculator {
   int add(String input) {
     if (input.isEmpty) return 0;
-    final normalized = input.replaceAll('\n', ',');
-    final parts = normalized.split(',').where((s) => s.isNotEmpty);
-
+    RegExp re = RegExp(r'-?\d+');
     int sum = 0;
-    for (final part in parts) {
-      try {
-        final number = int.parse(part);
-        sum += number;
-      } catch (e) {
+    List<int> negatives = [];
+
+    for (final m in re.allMatches(input)) {
+      final n = int.parse(m.group(0)!);
+      if (n < 0) {
+        negatives.add(n);
+      } else if (n > 1000) {
         continue;
+      } else {
+        sum += n;
       }
+    }
+
+    if (negatives.isNotEmpty) {
+      throw NegativeNumbersException(negatives);
     }
     return sum;
   }
