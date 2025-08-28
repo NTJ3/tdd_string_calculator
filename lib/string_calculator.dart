@@ -8,7 +8,18 @@ class NegativeNumbersException implements Exception {
 class StringCalculator {
   int add(String input) {
     if (input.isEmpty) return 0;
-    final parts = input.split(',');
-    return parts.map((s) => int.parse(s)).reduce((a, b) => a + b);
+    final normalized = input.replaceAll('\n', ',');
+    final parts = normalized.split(',').where((s) => s.isNotEmpty);
+
+    int sum = 0;
+    for (final part in parts) {
+      try {
+        final number = int.parse(part);
+        sum += number;
+      } catch (e) {
+        continue;
+      }
+    }
+    return sum;
   }
 }

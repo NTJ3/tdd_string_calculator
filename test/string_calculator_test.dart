@@ -14,5 +14,9 @@ void main() {
     test('two comma-separated numbers sum', () {
       expect(StringCalculator().add('1,2'), 3);
     });
+
+    test('newlines also delimit', () {
+      expect(StringCalculator().add('1\n2,3'), 6);
+    });
   });
 }
