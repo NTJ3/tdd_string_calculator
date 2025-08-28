@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final calculator = StringCalculator();
+    final Calculator calculator = StringCalculator();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: CalculatorScreen(calculator: calculator),

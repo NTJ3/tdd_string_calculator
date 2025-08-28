@@ -1,3 +1,7 @@
+abstract class Calculator {
+  int add(String input);
+}
+
 class NegativeNumbersException implements Exception {
   NegativeNumbersException(this.negatives);
   final List<int> negatives;
@@ -5,7 +9,8 @@ class NegativeNumbersException implements Exception {
   String toString() => 'Negatives not allowed: ${negatives.join(', ')}';
 }
 
-class StringCalculator {
+class StringCalculator extends Calculator {
+  @override
   int add(String input) {
     if (input.isEmpty) return 0;
     RegExp re = RegExp(r'-?\d+');

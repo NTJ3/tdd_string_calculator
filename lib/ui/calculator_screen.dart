@@ -4,7 +4,7 @@ import '../string_calculator.dart';
 
 class CalculatorScreen extends StatefulWidget {
   const CalculatorScreen({super.key, required this.calculator});
-  final StringCalculator calculator;
+  final Calculator calculator;
 
   @override
   State<CalculatorScreen> createState() => _CalculatorScreenState();
