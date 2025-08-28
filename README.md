@@ -1,11 +1,10 @@
-# String Calculator — Flutter + TDD (with Widget Tests & DI)
-
-A tiny project to **practice Test-Driven Development** in Flutter/Dart:
+# String Calculator — Flutter + TDD (with Widget Tests & DI) (Flutter WEB)
 
 - Core logic: **String Calculator** kata (unit tests).
 - Minimal UI: a text field + button + result/error (widget tests).
 - **Dependency Injection (DI):** UI receives a calculator via constructor.
 - **Frequent commits** showing **RED → GREEN → REFACTOR**.
+- **Runs only on Flutter WEB**
 
 ---
 
