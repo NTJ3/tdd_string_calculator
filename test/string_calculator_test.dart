@@ -41,6 +41,19 @@ void main() {
       expect(StringCalculator().add('2,1000'), 1002);
     });
 
+ test('any-length delimiter in [brackets]', () {
+      expect(StringCalculator().add('//[***]\n1***2***3'), 6);
+    });
+
+    test('multiple delimiters', () {
+      expect(StringCalculator().add('//[*][%]\n1*2%3'), 6);
+    });
+
+    test('multiple long delimiters', () {
+      expect(StringCalculator().add('//[**][%%]\n1**2%%3'), 6);
+    });
+
+
      test('negatives throw with all negatives listed - exception', () {
       expect(StringCalculator().add('1,-2,3,-4'), 4);
     });
